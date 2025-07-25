@@ -2,3 +2,7 @@ fastapi==0.116.1
 python-dotenv==1.1.1
 uvicorn==0.35.0
 pyodbc==5.2.0
+firebase-admin==7.0.0
+azure-monitor-opentelemetry==1.6.12
+opentelemetry-instrumentation-fastapi==0.52b1
+redis==5.0.1
