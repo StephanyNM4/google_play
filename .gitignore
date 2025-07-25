@@ -1,0 +1,21 @@
+# Entorno virtual
+env/
+
+# Archivos de compilación Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Archivos de entorno
+*.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de log y caché
+*.log
+.cache/
+
+#Carpeta secrets
+secrets/
