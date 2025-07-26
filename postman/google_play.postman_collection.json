@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "5f0b4ffe-57d1-40c5-a791-805fd6a7bd67",
+		"name": "google_play",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28261215"
+	},
+	"item": [
+		{
+			"name": "root",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{google_play_azure}}",
+					"host": [
+						"{{google_play_azure}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{google_play_azure}}/health",
+					"host": [
+						"{{google_play_azure}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbW15QGdtYWlsLmNvbSIsImZpcnN0bmFtZSI6IlRvbW15IiwibGFzdG5hbWUiOiJNYXRhbW9yb3MiLCJhY3RpdmUiOnRydWUsImFkbWluIjp0cnVlLCJleHAiOjE3NTM1MDE4ODkuNDU3NDk2LCJpYXQiOjE3NTM0OTgyODkuNDU3NDk2fQ.neoCKmVgOCZ3BSe9LADSelWBUvZb1r036UM3eLXEneY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{google_play_azure}}/prueba",
+					"host": [
+						"{{google_play_azure}}"
+					],
+					"path": [
+						"prueba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"tommy@gmail.com\",\r\n    \"password\": \"SecureP@ssword4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{google_play_azure}}/login/custom",
+					"host": [
+						"{{google_play_azure}}"
+					],
+					"path": [
+						"login",
+						"custom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"steph@gmail.com\",\r\n  \"password\": \"SecureP@ssword4\",\r\n  \"firstname\": \"Stephany\",\r\n  \"lastname\": \"Matamoros\",\r\n  \"is_active\": true,\r\n  \"is_admin\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{google_play_azure}}/signup",
+					"host": [
+						"{{google_play_azure}}"
+					],
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_music_review",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{google_play_azure}}/music",
+					"host": [
+						"{{google_play_azure}}"
+					],
+					"path": [
+						"music"
+					],
+					"query": [
+						{
+							"key": "app",
+							"value": "Spotify",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create music review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRvbW15QGdtYWlsLmNvbSIsImZpcnN0bmFtZSI6IlRvbW15IiwibGFzdG5hbWUiOiJNYXRhbW9yb3MiLCJhY3RpdmUiOnRydWUsImFkbWluIjp0cnVlLCJleHAiOjE3NTM1MDcxMTEuMDQ0MjU3LCJpYXQiOjE3NTM1MDM1MTEuMDQ0MjU3fQ.K72Pct6AKAliWndBxckceAurp6Wl8d-LXDRM1qOFO8w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"app\": \"Spotify\",\r\n  \"review\": \"Review prueba3\",\r\n  \"rating\": 0,\r\n  \"version\": \"0.0.0.0\",\r\n  \"review_date\": \"2025-07-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{google_play_azure}}/music",
+					"host": [
+						"{{google_play_azure}}"
+					],
+					"path": [
+						"music"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "google_play",
+			"value": "http://localhost:8000",
+			"type": "default"
+		},
+		{
+			"key": "google_play_azure",
+			"value": "https://api-musicreview-dev.azurewebsites.net",
+			"type": "string"
+		}
+	]
+}
